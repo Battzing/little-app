@@ -1,0 +1,14 @@
+.App {
+    margin: 20% auto;
+    width: 50%;
+}
+
+.App input {
+    width: 60%;
+    margin-right: 30px;
+}
+
+.App p {
+    margin-top: 20px;
+    color: #999;
+}
