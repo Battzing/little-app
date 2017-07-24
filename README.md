@@ -1,15 +1,11 @@
 
 ## APP ##
 
-#####下载#####
+Simple Installation
 
-clone this dictionary
+  Install node, npm
+  Run `npm install` in the project directory
+  
+Useage
 
-
-#####安装依赖#####
-
-npm install
-
-#####运行#####
-
-npm start
+  Run `npm start` and point your browser to http://localhost:3000
