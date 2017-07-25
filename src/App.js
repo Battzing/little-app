@@ -20,7 +20,7 @@ class App extends Component {
         for (let i = 0; i < value.length; i +=1) {
               switch (value[i]) {
                   case ' ':
-                      this.record = '';
+                      this.record = ' ';
                       break;
                   case ',':
                       this.record = ',';
@@ -50,13 +50,17 @@ class App extends Component {
             balance;
 
 
+        console.log(this.record);
         //拿到有效的数字并求和
         for (let i = 0; i < arr.length; i += 1) {
-            if(!!arr[i]) {
+            if(arr[i] !== this.record) {
                 result.push(Number(arr[i]));
                 amount += Number(arr[i]);
             }
         }
+
+        console.log(amount);
+        console.log(result);
 
         // 通过平衡位两层的值求出此平衡未
         balanceValue += result[0];
@@ -81,17 +85,17 @@ class App extends Component {
         this.record = ' ';
     };
 
-  render() {
-    return (
-      <div className="App">
-          <Input size="large" value={this.state.value}
-                 placeholder="请输入"
-                 onChange={this.handleChange}/>
-          <Button type="primary" onClick={this.handleClick}>提交</Button>
-          <p>请输入多个数字并用空格或逗号或句号分开求得平衡位</p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Input size="large" value={this.state.value}
+                       placeholder="请输入"
+                       onChange={this.handleChange}/>
+                <Button type="primary" onClick={this.handleClick}>提交</Button>
+                <p>请输入多个数字并用空格或逗号或句号分开求得平衡位</p>
+            </div>
+        );
+    }
 }
 
 export default App;
