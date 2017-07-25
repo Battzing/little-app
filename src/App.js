@@ -28,12 +28,6 @@ class App extends Component {
                   case '.':
                       this.record = '.';
                       break;
-                  case '，':
-                      this.record = ',';
-                      break;
-                  case '。':
-                      this.record = '。';
-                      break;
                   default:
               }
         };
